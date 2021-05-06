@@ -85,6 +85,7 @@ class PersonDetailViewController: UIViewController {
         balanceTextField.text = person.balance
         contactMethodTextField.text = person.contactMethod
         contactTextField.text = person.contactInfo
+        additionalCommentTextView.text = person.additionalComment
     }
     
     func updatefromInterface() {
@@ -95,6 +96,7 @@ class PersonDetailViewController: UIViewController {
         person.balance = balanceTextField.text!
         person.contactMethod = contactMethodTextField.text!
         person.contactInfo = contactTextField.text!
+        person.additionalComment = additionalCommentTextView.text!
     }
     
     func leaveViewController() {

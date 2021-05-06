@@ -12,15 +12,12 @@ class PersonTableViewCell: UITableViewCell {
     @IBOutlet weak var statusLabel: UILabel!
     @IBOutlet weak var campusLabel: UILabel!
     
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
-    }
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
+    var person: Person! {
+        didSet {
+            nameLabel.text = person.name
+            statusLabel.text = person.status
+            campusLabel.text = person.campus
+        }
     }
 
 }

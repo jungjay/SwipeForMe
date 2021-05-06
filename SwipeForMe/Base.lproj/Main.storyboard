@@ -27,10 +27,10 @@
             </objects>
             <point key="canvasLocation" x="1042.0289855072465" y="115.84821428571428"/>
         </scene>
-        <!--People List View Controller-->
+        <!--Person List View Controller-->
         <scene sceneID="5ZS-mg-AxN">
             <objects>
-                <viewController id="4up-tG-a5s" customClass="PeopleListViewController" customModule="SwipeForMe" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="4up-tG-a5s" customClass="PersonListViewController" customModule="SwipeForMe" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="b5S-fc-vmH">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -140,7 +140,7 @@
                                         <constraints>
                                             <constraint firstAttribute="height" constant="33" id="KfS-Xa-i5b"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" type="system" pointSize="33"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="29"/>
                                         <textInputTraits key="textInputTraits" returnKeyType="done" enablesReturnKeyAutomatically="YES"/>
                                     </textField>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Status:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1y6-jn-myj">
@@ -245,14 +245,12 @@
                                     </label>
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="please i am hungry" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="NfX-z7-kb7">
                                         <rect key="frame" x="8" y="376" width="304" height="140"/>
-                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="140" id="mXU-R4-PQQ"/>
                                         </constraints>
                                         <color key="textColor" systemColor="labelColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                        <textInputTraits key="textInputTraits"/>
-                                        <dataDetectorType key="dataDetectorTypes" phoneNumber="YES"/>
+                                        <textInputTraits key="textInputTraits" returnKeyType="done" enablesReturnKeyAutomatically="YES"/>
                                     </textView>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>

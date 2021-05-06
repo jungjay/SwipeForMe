@@ -16,15 +16,16 @@ class Person {
     var balance: String
     var contactMethod: String
     var contactInfo: String
+    var additionalComment: String
     
     var postingUserID: String
     var documentID: String
     
     var dictionary: [String: Any] {
-        return ["name": name, "status": status, "year": year, "campus": campus, "balance": balance, "contactMethod": contactMethod, "contactInfo": contactInfo, "postingUserID": postingUserID]
+        return ["name": name, "status": status, "year": year, "campus": campus, "balance": balance, "contactMethod": contactMethod, "contactInfo": contactInfo, "additionalComment": additionalComment, "postingUserID": postingUserID]
     }
     
-    init(name: String, status: String, year: String, campus: String, balance: String, contactMethod: String, contactInfo: String, postingUserID: String, documentID: String) {
+    init(name: String, status: String, year: String, campus: String, balance: String, contactMethod: String, contactInfo: String, additionalComment: String, postingUserID: String, documentID: String) {
         self.name = name
         self.status = status
         self.year = year
@@ -32,12 +33,28 @@ class Person {
         self.balance = balance
         self.contactMethod = contactMethod
         self.contactInfo = contactInfo
+        self.additionalComment = additionalComment
         self.postingUserID = postingUserID
         self.documentID = documentID
     }
     
     convenience init() {
-        self.init(name: "", status: "", year: "", campus: "", balance: "", contactMethod: "", contactInfo: "", postingUserID: "", documentID: "")
+        self.init(name: "", status: "", year: "", campus: "", balance: "", contactMethod: "", contactInfo: "", additionalComment: "", postingUserID: "", documentID: "")
+    }
+    
+    convenience init(dictionary: [String: Any]) {
+        let name = dictionary["name"] as! String? ?? ""
+        let status = dictionary["status"] as! String? ?? ""
+        let year = dictionary["year"] as! String? ?? ""
+        let campus = dictionary["campus"] as! String? ?? ""
+        let balance = dictionary["balance"] as! String? ?? ""
+        let contactMethod = dictionary["contactMethod"] as! String? ?? ""
+        let contactInfo = dictionary["contactInfo"] as! String? ?? ""
+        let additionalComment = dictionary["additionalComment"] as! String? ?? ""
+        let postingUserID = dictionary["postingUserID"] as! String? ?? ""
+        
+        self.init(name: name, status: status, year: year, campus: campus, balance: balance, contactMethod: contactMethod, contactInfo: contactInfo, additionalComment: additionalComment, postingUserID: postingUserID, documentID: "")
+    
     }
     
     func saveData(completion: @escaping (Bool)->()) {
