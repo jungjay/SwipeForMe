@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		698F58CF2644CEF3007D8006 /* UIView+addBorder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 698F58CE2644CEF3007D8006 /* UIView+addBorder.swift */; };
+		698F58D22644CF50007D8006 /* UIBarButtonItem+hide.swift in Sources */ = {isa = PBXBuildFile; fileRef = 698F58D12644CF50007D8006 /* UIBarButtonItem+hide.swift */; };
 		69C480D0263F902A006512B1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69C480CF263F902A006512B1 /* AppDelegate.swift */; };
 		69C480D2263F902A006512B1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69C480D1263F902A006512B1 /* SceneDelegate.swift */; };
 		69C480D4263F902A006512B1 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69C480D3263F902A006512B1 /* LoginViewController.swift */; };
@@ -25,6 +27,8 @@
 
 /* Begin PBXFileReference section */
 		371F3325830CE670A7C298DB /* Pods_SwipeForMe.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SwipeForMe.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		698F58CE2644CEF3007D8006 /* UIView+addBorder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+addBorder.swift"; sourceTree = "<group>"; };
+		698F58D12644CF50007D8006 /* UIBarButtonItem+hide.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIBarButtonItem+hide.swift"; sourceTree = "<group>"; };
 		69C480CC263F902A006512B1 /* SwipeForMe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwipeForMe.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		69C480CF263F902A006512B1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		69C480D1263F902A006512B1 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -95,6 +99,8 @@
 				69C9B9C02640EC6900B1B0EA /* PersonTableViewCell.swift */,
 				69C9B9E22640F4E800B1B0EA /* PersonDetailViewController.swift */,
 				69C9B9EC2641CDCC00B1B0EA /* UIViewController+alert.swift */,
+				698F58CE2644CEF3007D8006 /* UIView+addBorder.swift */,
+				698F58D12644CF50007D8006 /* UIBarButtonItem+hide.swift */,
 				69C480D5263F902A006512B1 /* Main.storyboard */,
 				69C480D8263F902C006512B1 /* Assets.xcassets */,
 				69C480DA263F902C006512B1 /* LaunchScreen.storyboard */,
@@ -246,9 +252,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				69C480D4263F902A006512B1 /* LoginViewController.swift in Sources */,
+				698F58D22644CF50007D8006 /* UIBarButtonItem+hide.swift in Sources */,
 				69C9B9BE2640EB2300B1B0EA /* PersonListViewController.swift in Sources */,
 				69C9B9E32640F4E800B1B0EA /* PersonDetailViewController.swift in Sources */,
 				69C480D0263F902A006512B1 /* AppDelegate.swift in Sources */,
+				698F58CF2644CEF3007D8006 /* UIView+addBorder.swift in Sources */,
 				69C9BA11264484BE00B1B0EA /* People.swift in Sources */,
 				69C9B9E62641C30300B1B0EA /* Person.swift in Sources */,
 				69C9B9C12640EC6900B1B0EA /* PersonTableViewCell.swift in Sources */,
