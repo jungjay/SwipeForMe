@@ -21,7 +21,7 @@ class PersonDetailViewController: UIViewController {
     
     let statuses = ["Requesting", "Offering"]
     let years = ["2025", "2024", "2023", "2022"]
-    let campuses = ["Main", "Newton", "Brighton"]
+    let campuses = ["Main (Upper)", "Main (Lower)", "Newton"]
     let balances = ["$3,000+", "$2,500 to $2,999", "$2,000 to $2,499", "$1,500 to $1,999", "$1,000 to $1,499", "$500 to $999", "$300 to $499", "$100 to $299", "$0 to $99"]
     let contactMethods = ["Instagram", "Twitter"]
     
