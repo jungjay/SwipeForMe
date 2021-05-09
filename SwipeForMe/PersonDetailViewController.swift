@@ -47,6 +47,9 @@ class PersonDetailViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        saveBarButton.isEnabled = false
+        
+        
         // hide keyboard if tapping outside field
         let tap = UITapGestureRecognizer(target: self.view, action: #selector(UIView.endEditing(_:)))
         tap.cancelsTouchesInView = false
@@ -93,6 +96,7 @@ class PersonDetailViewController: UIViewController {
         balanceTextField.placeholder = "Select Balance"
         contactMethodTextField.placeholder = "Select Contact Method"
         
+        
     }
     
     func updateUserInterface() {
@@ -105,6 +109,7 @@ class PersonDetailViewController: UIViewController {
         contactTextField.text = person.contactInfo
         additionalCommentTextView.text = person.additionalComment
         
+
         
         // TODO:- working on Posted on: Date Label
         // gotta add date to person class
@@ -208,6 +213,15 @@ class PersonDetailViewController: UIViewController {
             }
         }
     }
+    
+    @IBAction func textFieldValueChanged(_ sender: Any) {
+        if nameTextField.text != "" && statusTextField.text != "" && yearTextField.text != "" && campusTextField.text != "" && balanceTextField.text != "" && contactMethodTextField.text != "" && contactTextField.text != "" {
+            saveBarButton.isEnabled = true
+        } else {
+            saveBarButton.isEnabled = false
+        }
+    }
+
 }
 
 extension PersonDetailViewController: UIPickerViewDelegate, UIPickerViewDataSource {
@@ -273,3 +287,6 @@ extension PersonDetailViewController: UIPickerViewDelegate, UIPickerViewDataSour
     }
     
 }
+
+
+
