@@ -47,6 +47,7 @@ class PersonDetailViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        
         saveBarButton.isEnabled = false
         
         
@@ -60,8 +61,8 @@ class PersonDetailViewController: UIViewController {
         }
         updateUserInterface()
         
-        nameTextField.placeholder = "Enter Name"
-        contactTextField.placeholder = "Enter Username"
+        nameTextField.placeholder = "Name"
+        contactTextField.placeholder = "Username"
         
         statusPickerView.delegate = self
         statusPickerView.dataSource = self
@@ -90,14 +91,15 @@ class PersonDetailViewController: UIViewController {
         balancePickerView.tag = 4
         contactMethodPickerView.tag = 5
         
-        statusTextField.placeholder = "Select Status"
-        yearTextField.placeholder = "Select Class"
-        campusTextField.placeholder = "Select Campus"
-        balanceTextField.placeholder = "Select Balance"
-        contactMethodTextField.placeholder = "Select Contact Method"
+        statusTextField.placeholder = "Status"
+        yearTextField.placeholder = "Class"
+        campusTextField.placeholder = "Campus"
+        balanceTextField.placeholder = "Balance"
+        contactMethodTextField.placeholder = "Contact Method"
         
         
     }
+    
     
     func updateUserInterface() {
         nameTextField.text = person.name
@@ -131,27 +133,27 @@ class PersonDetailViewController: UIViewController {
                 // what people see when they look at posts that they didn't create
                 nameTextField.isEnabled = false
                 nameTextField.borderStyle = .none
-                nameTextField.backgroundColor = .white
+                nameTextField.backgroundColor = .clear
                 statusTextField.isEnabled = false
                 statusTextField.borderStyle = .none
-                statusTextField.backgroundColor = .white
+                statusTextField.backgroundColor = .clear
                 yearTextField.isEnabled = false
                 yearTextField.borderStyle = .none
-                yearTextField.backgroundColor = .white
+                yearTextField.backgroundColor = .clear
                 campusTextField.isEnabled = false
                 campusTextField.borderStyle = .none
-                campusTextField.backgroundColor = .white
+                campusTextField.backgroundColor = .clear
                 balanceTextField.isEnabled = false
                 balanceTextField.borderStyle = .none
-                balanceTextField.backgroundColor = .white
+                balanceTextField.backgroundColor = .clear
                 contactMethodTextField.isEnabled = false
                 contactMethodTextField.borderStyle = .none
-                contactMethodTextField.backgroundColor = .white
+                contactMethodTextField.backgroundColor = .clear
                 contactTextField.isEnabled = false
                 contactTextField.borderStyle = .none
-                contactTextField.backgroundColor = .white
+                contactTextField.backgroundColor = .clear
                 additionalCommentTextView.isEditable = false
-                additionalCommentTextView.backgroundColor = .white
+                additionalCommentTextView.backgroundColor = .clear
             }
         }
     }
@@ -168,14 +170,14 @@ class PersonDetailViewController: UIViewController {
     }
     
     func addBordersToEditableObjects() {
-        nameTextField.addBorder(width: 0.5, radius: 5.0, color: .black)
-        statusTextField.addBorder(width: 0.5, radius: 5.0, color: .black)
-        yearTextField.addBorder(width: 0.5, radius: 5.0, color: .black)
-        campusTextField.addBorder(width: 0.5, radius: 5.0, color: .black)
-        balanceTextField.addBorder(width: 0.5, radius: 5.0, color: .black)
-        contactMethodTextField.addBorder(width: 0.5, radius: 5.0, color: .black)
-        contactTextField.addBorder(width: 0.5, radius: 5.0, color: .black)
-        additionalCommentTextView.addBorder(width: 0.5, radius: 5.0, color: .black)
+        nameTextField.addBorder(width: 0.5, radius: 5.0, color: .white)
+        statusTextField.addBorder(width: 0.5, radius: 5.0, color: .white)
+        yearTextField.addBorder(width: 0.5, radius: 5.0, color: .white)
+        campusTextField.addBorder(width: 0.5, radius: 5.0, color: .white)
+        balanceTextField.addBorder(width: 0.5, radius: 5.0, color: .white)
+        contactMethodTextField.addBorder(width: 0.5, radius: 5.0, color: .white)
+        contactTextField.addBorder(width: 0.5, radius: 5.0, color: .white)
+        additionalCommentTextView.addBorder(width: 0.5, radius: 5.0, color: .white)
     }
     
     
@@ -214,6 +216,7 @@ class PersonDetailViewController: UIViewController {
         }
     }
     
+    // disables save bar button if all text fields are empty; aka, all text fields must be filled in with something
     @IBAction func textFieldValueChanged(_ sender: Any) {
         if nameTextField.text != "" && statusTextField.text != "" && yearTextField.text != "" && campusTextField.text != "" && balanceTextField.text != "" && contactMethodTextField.text != "" && contactTextField.text != "" {
             saveBarButton.isEnabled = true
@@ -221,6 +224,12 @@ class PersonDetailViewController: UIViewController {
             saveBarButton.isEnabled = false
         }
     }
+    
+  
+
+    
+
+    
 
 }
 
@@ -285,7 +294,6 @@ extension PersonDetailViewController: UIPickerViewDelegate, UIPickerViewDataSour
             return
         }
     }
-    
 }
 
 

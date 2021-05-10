@@ -24,6 +24,9 @@ class LoginViewController: UIViewController {
         super.viewDidAppear(animated)
         signIn()
     }
+    
+
+    
 
     func signIn() {
         let providers: [FUIAuthProvider] = [
@@ -63,8 +66,8 @@ extension LoginViewController: FUIAuthDelegate {
         // Create an instance of the FirebaseAuth login view controller
         let loginViewController = FUIAuthPickerViewController(authUI: authUI)
 
-        // Set background color to white
-        loginViewController.view.backgroundColor = UIColor.white
+        // Set background color to black
+        loginViewController.view.backgroundColor = UIColor.black
         loginViewController.view.subviews[0].backgroundColor = UIColor.clear
         loginViewController.view.subviews[0].subviews[0].backgroundColor = UIColor.clear
 
