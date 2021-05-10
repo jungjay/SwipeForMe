@@ -67,7 +67,7 @@ extension LoginViewController: FUIAuthDelegate {
         let loginViewController = FUIAuthPickerViewController(authUI: authUI)
 
         // Set background color to black
-        loginViewController.view.backgroundColor = UIColor.black
+        loginViewController.view.backgroundColor = UIColor(named: "TextLabels+ButtonsColor")
         loginViewController.view.subviews[0].backgroundColor = UIColor.clear
         loginViewController.view.subviews[0].subviews[0].backgroundColor = UIColor.clear
 
@@ -76,7 +76,7 @@ extension LoginViewController: FUIAuthDelegate {
         let y = marginInsets + topSafeArea
         let width = self.view.frame.width - (marginInsets * 2)
         //        let height = loginViewController.view.subviews[0].frame.height - (topSafeArea) - (marginInsets * 2)
-        let height = UIScreen.main.bounds.height - (topSafeArea) - (marginInsets * 2)
+        let height = UIScreen.main.bounds.height - (topSafeArea) - (marginInsets * 10)
 
         let logoFrame = CGRect(x: x, y: y, width: width, height: height)
 

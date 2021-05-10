@@ -51,6 +51,7 @@ class PersonDetailViewController: UIViewController {
         saveBarButton.isEnabled = false
         
         
+        
         // hide keyboard if tapping outside field
         let tap = UITapGestureRecognizer(target: self.view, action: #selector(UIView.endEditing(_:)))
         tap.cancelsTouchesInView = false
@@ -170,14 +171,14 @@ class PersonDetailViewController: UIViewController {
     }
     
     func addBordersToEditableObjects() {
-        nameTextField.addBorder(width: 0.5, radius: 5.0, color: .white)
-        statusTextField.addBorder(width: 0.5, radius: 5.0, color: .white)
-        yearTextField.addBorder(width: 0.5, radius: 5.0, color: .white)
-        campusTextField.addBorder(width: 0.5, radius: 5.0, color: .white)
-        balanceTextField.addBorder(width: 0.5, radius: 5.0, color: .white)
-        contactMethodTextField.addBorder(width: 0.5, radius: 5.0, color: .white)
-        contactTextField.addBorder(width: 0.5, radius: 5.0, color: .white)
-        additionalCommentTextView.addBorder(width: 0.5, radius: 5.0, color: .white)
+        nameTextField.addBorder(width: 0.5, radius: 5.0, color: .systemGray)
+        statusTextField.addBorder(width: 0.5, radius: 5.0, color: .systemGray)
+        yearTextField.addBorder(width: 0.5, radius: 5.0, color: .systemGray)
+        campusTextField.addBorder(width: 0.5, radius: 5.0, color: .systemGray)
+        balanceTextField.addBorder(width: 0.5, radius: 5.0, color: .systemGray)
+        contactMethodTextField.addBorder(width: 0.5, radius: 5.0, color: .systemGray)
+        contactTextField.addBorder(width: 0.5, radius: 5.0, color: .systemGray)
+        additionalCommentTextView.addBorder(width: 0.5, radius: 5.0, color: .systemGray)
     }
     
     
@@ -196,7 +197,7 @@ class PersonDetailViewController: UIViewController {
             if success {
                 self.leaveViewController()
             } else {
-                self.oneButtonAlert(title: "Save Failed", message: "For some reason, the data would not save to the cloud.")
+                self.oneButtonAlert(title: "Save Failed", message: "You are not logged in with a Boston College email address.")
             }
         }
     }

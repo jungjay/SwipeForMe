@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="1Jo-Zd-eBK">
-    <device id="retina6_5" orientation="portrait" appearance="light"/>
+    <device id="retina5_5" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
@@ -15,7 +15,7 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="LoginViewController" customModule="SwipeForMe" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="673"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -34,12 +34,12 @@
             <objects>
                 <viewController id="4up-tG-a5s" customClass="PersonListViewController" customModule="SwipeForMe" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="b5S-fc-vmH">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="725"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="zEi-Nv-Zxe">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="725"/>
-                                <color key="backgroundColor" name="CellColor"/>
+                                <rect key="frame" x="0.0" y="44" width="414" height="643"/>
+                                <color key="backgroundColor" name="GeneralBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" rowHeight="60" id="hsB-5x-eom" customClass="PersonTableViewCell" customModule="SwipeForMe" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="414" height="60"/>
@@ -54,7 +54,7 @@
                                                         <constraint firstAttribute="height" constant="33" id="PuG-pc-9Yb"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="24"/>
-                                                    <color key="textColor" name="OrangeColor"/>
+                                                    <color key="textColor" name="TextLabels+ButtonsColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Status: Requesting" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aai-Rg-vqy">
@@ -63,7 +63,7 @@
                                                         <constraint firstAttribute="height" constant="18" id="Bkd-Fr-7df"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="17"/>
-                                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <color key="textColor" name="InputTextColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Campus: Main (Upper)" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oQY-Af-yYc">
@@ -72,11 +72,11 @@
                                                         <constraint firstAttribute="height" constant="18" id="9yE-8Q-3AO"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="17"/>
-                                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <color key="textColor" name="InputTextColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
-                                            <color key="backgroundColor" name="CellColor"/>
+                                            <color key="backgroundColor" name="GeneralBackgroundColor"/>
                                             <constraints>
                                                 <constraint firstItem="uSS-SL-OHp" firstAttribute="top" secondItem="ill-Rg-XfZ" secondAttribute="top" constant="4" id="CEf-T8-hpm"/>
                                                 <constraint firstAttribute="trailing" secondItem="oQY-Af-yYc" secondAttribute="trailing" constant="8" id="CZh-AI-Cgt"/>
@@ -108,18 +108,17 @@
                     </view>
                     <toolbarItems>
                         <barButtonItem style="plain" id="TsI-9j-fkV">
-                            <segmentedControl key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="bar" selectedSegmentIndex="0" id="dTn-uZ-2kv">
+                            <segmentedControl key="customView" opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="bar" selectedSegmentIndex="0" id="dTn-uZ-2kv">
                                 <rect key="frame" x="20" y="11" width="374" height="33"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" name="CellColor"/>
+                                <color key="backgroundColor" name="GeneralBackgroundColor"/>
                                 <segments>
                                     <segment title="All"/>
                                     <segment title="Upper"/>
                                     <segment title="Lower"/>
                                     <segment title="Newton"/>
                                 </segments>
-                                <color key="tintColor" name="OrangeColor"/>
-                                <color key="selectedSegmentTintColor" name="BlueColor"/>
+                                <color key="tintColor" name="TextLabels+ButtonsColor"/>
                                 <connections>
                                     <action selector="sortSegmentPressed:" destination="4up-tG-a5s" eventType="valueChanged" id="WVo-DH-t1F"/>
                                 </connections>
@@ -128,13 +127,13 @@
                     </toolbarItems>
                     <navigationItem key="navigationItem" title="SwipeForMe" largeTitleDisplayMode="always" id="aAG-OZ-85C">
                         <barButtonItem key="leftBarButtonItem" title="Sign Out" id="roz-3a-Oag">
-                            <color key="tintColor" name="BlueColor"/>
+                            <color key="tintColor" name="TextLabels+ButtonsColor"/>
                             <connections>
                                 <segue destination="Og4-Xj-miu" kind="unwind" identifier="SignOutUnwind" animates="NO" unwindAction="unwindSignOutPressedWithSegue:" id="adA-k1-1Cz"/>
                             </connections>
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="Ynq-th-qP1">
-                            <color key="tintColor" name="BlueColor"/>
+                            <color key="tintColor" name="TextLabels+ButtonsColor"/>
                             <connections>
                                 <segue destination="dMY-r0-A48" kind="presentation" identifier="AddDetail" modalPresentationStyle="fullScreen" id="bHE-E8-ajn"/>
                             </connections>
@@ -156,32 +155,31 @@
             <objects>
                 <viewController id="Hef-Fb-UGQ" customClass="PersonDetailViewController" customModule="SwipeForMe" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="rVK-OL-i4v">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ESD-dB-Bck">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="774"/>
+                                <rect key="frame" x="0.0" y="44" width="414" height="692"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Benedict Cumberbatch" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="sM0-zb-JcX">
                                         <rect key="frame" x="8" y="8" width="398" height="33"/>
-                                        <color key="backgroundColor" systemColor="systemGrayColor"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="33" id="KfS-Xa-i5b"/>
                                         </constraints>
-                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="21"/>
+                                        <color key="textColor" name="InputTextColor"/>
+                                        <fontDescription key="fontDescription" name="GillSans-SemiBold" family="Gill Sans" pointSize="24"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="words" autocorrectionType="no" returnKeyType="done" enablesReturnKeyAutomatically="YES" textContentType="name"/>
                                         <connections>
                                             <action selector="textFieldValueChanged:" destination="Hef-Fb-UGQ" eventType="editingDidEnd" id="PFt-9j-4Nx"/>
                                         </connections>
                                     </textField>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Status:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1y6-jn-myj">
-                                        <rect key="frame" x="8.0000000000000036" y="56" width="61.333333333333343" height="41"/>
+                                        <rect key="frame" x="7.9999999999999964" y="56" width="61.666666666666657" height="41"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="41" id="4cd-xP-a1p"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="23"/>
-                                        <color key="textColor" name="OrangeColor"/>
+                                        <color key="textColor" name="TextLabels+ButtonsColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Year:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3x4-JM-QMO">
@@ -190,7 +188,7 @@
                                             <constraint firstAttribute="height" constant="41" id="MCz-MH-kBn"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="23"/>
-                                        <color key="textColor" name="OrangeColor"/>
+                                        <color key="textColor" name="TextLabels+ButtonsColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Campus:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aKU-G6-ZjF">
@@ -199,14 +197,13 @@
                                             <constraint firstAttribute="height" constant="41" id="Fub-5f-Jim"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="23"/>
-                                        <color key="textColor" name="OrangeColor"/>
+                                        <color key="textColor" name="TextLabels+ButtonsColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="AFi-er-o6U">
-                                        <rect key="frame" x="133" y="59" width="273" height="34"/>
+                                        <rect key="frame" x="133" y="62" width="273" height="34"/>
                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                                        <color key="backgroundColor" systemColor="systemGrayColor"/>
-                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="textColor" name="InputTextColor"/>
                                         <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="21"/>
                                         <textInputTraits key="textInputTraits"/>
                                         <connections>
@@ -214,10 +211,9 @@
                                         </connections>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="G3h-yE-ABZ">
-                                        <rect key="frame" x="133" y="108" width="273" height="34"/>
+                                        <rect key="frame" x="133" y="110" width="273" height="34"/>
                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                                        <color key="backgroundColor" systemColor="systemGrayColor"/>
-                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="textColor" name="InputTextColor"/>
                                         <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="21"/>
                                         <textInputTraits key="textInputTraits"/>
                                         <connections>
@@ -225,10 +221,9 @@
                                         </connections>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="BVc-jQ-iVv">
-                                        <rect key="frame" x="133" y="157" width="273" height="34"/>
+                                        <rect key="frame" x="133" y="159" width="273" height="34"/>
                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                                        <color key="backgroundColor" systemColor="systemGrayColor"/>
-                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="textColor" name="InputTextColor"/>
                                         <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="21"/>
                                         <textInputTraits key="textInputTraits"/>
                                         <connections>
@@ -236,19 +231,18 @@
                                         </connections>
                                     </textField>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Balance:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uy2-6f-5Xi">
-                                        <rect key="frame" x="8" y="203" width="75.333333333333329" height="41"/>
+                                        <rect key="frame" x="8" y="203" width="75.666666666666671" height="41"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="41" id="cEO-VD-m16"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="23"/>
-                                        <color key="textColor" name="OrangeColor"/>
+                                        <color key="textColor" name="TextLabels+ButtonsColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="QSW-Qg-1P1">
-                                        <rect key="frame" x="133" y="206" width="273" height="34"/>
+                                        <rect key="frame" x="133" y="208" width="273" height="34"/>
                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                                        <color key="backgroundColor" systemColor="systemGrayColor"/>
-                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="textColor" name="InputTextColor"/>
                                         <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="21"/>
                                         <textInputTraits key="textInputTraits"/>
                                         <connections>
@@ -256,12 +250,12 @@
                                         </connections>
                                     </textField>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Contact Me:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sz3-qG-cMK">
-                                        <rect key="frame" x="7.9999999999999929" y="252" width="116.33333333333331" height="41"/>
+                                        <rect key="frame" x="8.0000000000000071" y="252" width="116.66666666666669" height="41"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="41" id="jVR-ut-unc"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="23"/>
-                                        <color key="textColor" name="OrangeColor"/>
+                                        <color key="textColor" name="TextLabels+ButtonsColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="@" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uqs-nk-tEC">
@@ -271,14 +265,13 @@
                                             <constraint firstAttribute="height" constant="41" id="uJT-My-Uj8"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="23"/>
-                                        <color key="textColor" name="OrangeColor"/>
+                                        <color key="textColor" name="TextLabels+ButtonsColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="UCx-HZ-fHs">
-                                        <rect key="frame" x="133" y="255" width="273" height="34"/>
+                                        <rect key="frame" x="133" y="257" width="273" height="34"/>
                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                                        <color key="backgroundColor" systemColor="systemGrayColor"/>
-                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="textColor" name="InputTextColor"/>
                                         <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="21"/>
                                         <textInputTraits key="textInputTraits"/>
                                         <connections>
@@ -286,10 +279,9 @@
                                         </connections>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="jaayjung" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="A2B-PY-tjs">
-                                        <rect key="frame" x="133" y="297" width="273" height="34"/>
+                                        <rect key="frame" x="133" y="299" width="273" height="34"/>
                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                                        <color key="backgroundColor" systemColor="systemGrayColor"/>
-                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="textColor" name="InputTextColor"/>
                                         <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="21"/>
                                         <textInputTraits key="textInputTraits" autocorrectionType="no" returnKeyType="done" enablesReturnKeyAutomatically="YES" textContentType="username"/>
                                         <connections>
@@ -302,24 +294,23 @@
                                             <constraint firstAttribute="height" constant="41" id="esk-gp-8HV"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="23"/>
-                                        <color key="textColor" name="OrangeColor"/>
+                                        <color key="textColor" name="TextLabels+ButtonsColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="please i am hungry" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="NfX-z7-kb7">
                                         <rect key="frame" x="8" y="376" width="398" height="90"/>
-                                        <color key="backgroundColor" systemColor="systemGrayColor"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="90" id="mXU-R4-PQQ"/>
                                         </constraints>
-                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="textColor" name="InputTextColor"/>
                                         <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="21"/>
                                         <textInputTraits key="textInputTraits" returnKeyType="done" enablesReturnKeyAutomatically="YES"/>
                                     </textView>
                                     <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tXv-R0-S9D">
-                                        <rect key="frame" x="164" y="740" width="86" height="33"/>
-                                        <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="18"/>
+                                        <rect key="frame" x="159" y="656" width="96" height="35"/>
+                                        <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="20"/>
                                         <state key="normal" title="Delete Post">
-                                            <color key="titleColor" systemColor="systemRedColor"/>
+                                            <color key="titleColor" name="TextLabels+ButtonsColor"/>
                                         </state>
                                         <connections>
                                             <action selector="deleteButtonPressed:" destination="Hef-Fb-UGQ" eventType="touchUpInside" id="lUY-lP-YH3"/>
@@ -329,18 +320,18 @@
                                         <rect key="frame" x="8" y="474" width="398" height="23"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES"/>
                                         <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="20"/>
-                                        <color key="textColor" name="OrangeColor"/>
+                                        <color key="textColor" name="InputTextColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="posted on: " lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="daM-E2-Bu4">
                                         <rect key="frame" x="8" y="497" width="398" height="21"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES"/>
                                         <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="20"/>
-                                        <color key="textColor" name="OrangeColor"/>
+                                        <color key="textColor" name="InputTextColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
-                                <color key="backgroundColor" name="CellColor"/>
+                                <color key="backgroundColor" name="WhiteColor"/>
                                 <constraints>
                                     <constraint firstItem="1y6-jn-myj" firstAttribute="top" secondItem="sM0-zb-JcX" secondAttribute="bottom" constant="15" id="3Xm-fx-3pH"/>
                                     <constraint firstAttribute="trailing" secondItem="NfX-z7-kb7" secondAttribute="trailing" constant="8" id="4QB-pC-bku"/>
@@ -378,13 +369,13 @@
                     </view>
                     <navigationItem key="navigationItem" largeTitleDisplayMode="never" id="UP5-lb-lbg">
                         <barButtonItem key="leftBarButtonItem" title="Cancel" id="HAg-73-lvf">
-                            <color key="tintColor" name="BlueColor"/>
+                            <color key="tintColor" name="TextLabels+ButtonsColor"/>
                             <connections>
                                 <action selector="cancelButtonPressed:" destination="Hef-Fb-UGQ" id="5Du-0C-fi2"/>
                             </connections>
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" title="Save" id="rtO-NP-cgx">
-                            <color key="tintColor" name="BlueColor"/>
+                            <color key="tintColor" name="TextLabels+ButtonsColor"/>
                             <connections>
                                 <action selector="saveButtonPressed:" destination="Hef-Fb-UGQ" id="N89-gw-o9b"/>
                             </connections>
@@ -417,20 +408,20 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" toolbarHidden="NO" id="1Jo-Zd-eBK" sceneMemberID="viewController">
                     <toolbarItems/>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics" translucent="NO"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" largeTitles="YES" id="1cg-qF-QoN">
-                        <rect key="frame" x="0.0" y="44" width="414" height="96"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="1cg-qF-QoN">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="barTintColor" name="CellColor"/>
+                        <color key="barTintColor" name="GeneralBackgroundColor"/>
                         <textAttributes key="largeTitleTextAttributes">
-                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <offsetWrapper key="textShadowOffset" horizontal="0.0" vertical="0.0"/>
                         </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <toolbar key="toolbar" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" id="Qkk-h4-CU1">
-                        <rect key="frame" x="0.0" y="813" width="414" height="49"/>
+                        <rect key="frame" x="0.0" y="692" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="barTintColor" name="CellColor"/>
+                        <color key="barTintColor" name="GeneralBackgroundColor"/>
                     </toolbar>
                     <connections>
                         <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="aL3-MG-9dR"/>
@@ -447,15 +438,15 @@
                     <toolbarItems/>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics" translucent="NO"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="cSb-5i-csP">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="barTintColor" name="CellColor"/>
+                        <color key="barTintColor" name="GeneralBackgroundColor"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <toolbar key="toolbar" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" id="Ysf-yw-aaE">
-                        <rect key="frame" x="0.0" y="813" width="414" height="49"/>
+                        <rect key="frame" x="0.0" y="692" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="barTintColor" name="CellColor"/>
+                        <color key="barTintColor" name="GeneralBackgroundColor"/>
                     </toolbar>
                     <connections>
                         <segue destination="Hef-Fb-UGQ" kind="relationship" relationship="rootViewController" id="klS-03-jeZ"/>
@@ -470,23 +461,23 @@
         <segue reference="HeH-95-UOh"/>
     </inferredMetricsTieBreakers>
     <resources>
-        <namedColor name="BlueColor">
-            <color red="0.16099999845027924" green="0.50400000810623169" blue="0.98799997568130493" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-        </namedColor>
         <namedColor name="CellColor">
             <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
-        <namedColor name="OrangeColor">
-            <color red="1" green="0.56470588235294117" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        <namedColor name="GeneralBackgroundColor">
+            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="InputTextColor">
+            <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="TextLabels+ButtonsColor">
+            <color red="0.90588235294117647" green="0.35294117647058826" blue="0.32941176470588235" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        </namedColor>
+        <namedColor name="WhiteColor">
+            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-        <systemColor name="systemGrayColor">
-            <color red="0.55686274509803924" green="0.55686274509803924" blue="0.57647058823529407" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
-        <systemColor name="systemRedColor">
-            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

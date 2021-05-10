@@ -7,6 +7,7 @@
 
 import UIKit
 
+@available(iOS 13.0, *)
 class PersonListViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var sortSegmentedControl: UISegmentedControl!
@@ -40,11 +41,16 @@ class PersonListViewController: UIViewController {
     
     func configureSegmentedControl() {
         // set font colors for segmented control
-//        let
-//        sortSegmentedControl.setTitleTextAttributes(<#T##attributes: [NSAttributedString.Key : Any]?##[NSAttributedString.Key : Any]?#>, for: .selected)
-//        sortSegmentedControl.setTitleTextAttributes(<#T##attributes: [NSAttributedString.Key : Any]?##[NSAttributedString.Key : Any]?#>, for: .normal)
-        // add white border to segmented control
-        sortSegmentedControl.layer.borderColor = UIColor.white.cgColor
+        let whiteFontColor = [NSAttributedString.Key.foregroundColor : UIColor(named: "GeneralBackgroundColor") ?? UIColor.white]
+        let redFontColor = [NSAttributedString.Key.foregroundColor : UIColor(named: "TextLabels+ButtonsColor") ?? UIColor.red]
+        sortSegmentedControl.backgroundColor = UIColor(named: "GeneralBackgroundColor")
+        sortSegmentedControl.selectedSegmentTintColor = UIColor(named: "TextLabels+ButtonsColor")
+        sortSegmentedControl.setTitleTextAttributes(whiteFontColor, for: .selected)
+        sortSegmentedControl.setTitleTextAttributes(redFontColor, for: .normal)
+        
+        // add that reddish color as the border to segmented control
+//        sortSegmentedControl.layer.borderColor = UIColor.white.cgColor
+        sortSegmentedControl.layer.borderColor = UIColor(named: "TextLabels+ButtonsColor")?.cgColor
         sortSegmentedControl.layer.borderWidth = 1.0
     }
     
@@ -87,6 +93,7 @@ class PersonListViewController: UIViewController {
     }
 }
 
+@available(iOS 13.0, *)
 extension PersonListViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return people.personArray.count
