@@ -44,6 +44,8 @@ class PersonListViewController: UIViewController {
         let whiteFontColor = [NSAttributedString.Key.foregroundColor : UIColor(named: "GeneralBackgroundColor") ?? UIColor.white]
         let redFontColor = [NSAttributedString.Key.foregroundColor : UIColor(named: "TextLabels+ButtonsColor") ?? UIColor.red]
         sortSegmentedControl.backgroundColor = UIColor(named: "GeneralBackgroundColor")
+        // the following line of code breaks iOS 12 support. HUGE bummer.
+        // TODO:- LOOK FOR A WORK AROUND
         sortSegmentedControl.selectedSegmentTintColor = UIColor(named: "TextLabels+ButtonsColor")
         sortSegmentedControl.setTitleTextAttributes(whiteFontColor, for: .selected)
         sortSegmentedControl.setTitleTextAttributes(redFontColor, for: .normal)
